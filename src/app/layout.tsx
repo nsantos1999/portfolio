@@ -2,6 +2,7 @@ import { StyledComponentsRegistry } from "@/registries/StyledComponentsRegistry"
 import "./globals.css";
 import { Quicksand } from "next/font/google";
 import { CustomThemeProvider } from "@/providers/CustomThemeProvider";
+import GlobalStyle from "@/styles/global-styles";
 
 const quicksand = Quicksand({ subsets: ["latin"] });
 
@@ -19,7 +20,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={quicksand.className}>
         <StyledComponentsRegistry>
-          <CustomThemeProvider>{children}</CustomThemeProvider>
+          <CustomThemeProvider>
+            <GlobalStyle />
+            {children}
+          </CustomThemeProvider>
         </StyledComponentsRegistry>
       </body>
     </html>

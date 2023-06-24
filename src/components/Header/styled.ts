@@ -17,9 +17,9 @@ export const Container = styled("div")`
   text-align: center;
   align-self: center;
   justify-content: space-between;
-  border-radius: 5px;
+  border-radius: 10px;
   /* opacity: 0.7; */
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: ${({ theme }) => theme.shadow.high({ y: 3 })};
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
 

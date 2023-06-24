@@ -25,7 +25,22 @@ export interface ThemeTypography {
   fontFamily: FontFamily;
 }
 
+export interface ShadowGenerateFunction {
+  x?: number;
+  y?: number;
+  blurRadius?: number;
+  spreadRadius?: number;
+  opacity?: number;
+}
+
+export interface Shadow {
+  low: (props: ShadowGenerateFunction) => string;
+  medium: (props: ShadowGenerateFunction) => string;
+  high: (props: ShadowGenerateFunction) => string;
+}
+
 export interface Theme {
   palette: ThemePalette;
   typography: ThemeTypography;
+  shadow: Shadow;
 }
