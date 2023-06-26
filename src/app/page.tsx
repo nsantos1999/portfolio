@@ -1,4 +1,3 @@
-import Image from "next/image";
 import styles from "./page.module.css";
 import { HomeContent } from "@/modules/home/contents/HomeContent";
 
