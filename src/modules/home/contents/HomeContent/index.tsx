@@ -9,8 +9,6 @@ import Lottie from "react-lottie";
 import animationData from "@/animations/developer.json";
 import { AnimatePresence } from "framer-motion";
 
-console.log(animationData);
-
 export function HomeContent() {
   return (
     <>
@@ -25,7 +23,7 @@ export function HomeContent() {
           >
             <Lottie
               options={{
-                loop: false,
+                loop: true,
                 autoplay: true,
                 animationData: animationData,
                 rendererSettings: {
