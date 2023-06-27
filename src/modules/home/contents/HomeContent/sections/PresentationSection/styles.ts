@@ -7,4 +7,7 @@ export const SectionContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  gap: 2rem;
+  flex-direction: column;
 `;

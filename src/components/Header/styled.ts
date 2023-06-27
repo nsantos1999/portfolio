@@ -1,13 +1,14 @@
 "use client";
 
 import { styled } from "styled-components";
+import { motion } from "framer-motion";
 
-export const Container = styled("div")`
-  position: fixed;
+export const Container = styled(motion.div)`
+  position: absolute;
   top: 3rem;
   display: flex;
   align-items: center;
-  width: 50%;
+  width: 70%;
   left: 0;
   right: 0;
   margin: auto;
