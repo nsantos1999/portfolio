@@ -8,8 +8,11 @@ import { PresentationSection } from "./sections/PresentationSection";
 import Lottie from "react-lottie";
 import animationData from "@/animations/developer.json";
 import { AnimatePresence } from "framer-motion";
+import useTranslation from "next-translate/useTranslation";
 
 export function HomeContent() {
+  const { t } = useTranslation("home");
+
   return (
     <>
       <Header />
@@ -41,7 +44,7 @@ export function HomeContent() {
               exit={{ opacity: 0, y: 50 }}
               transition={{ type: "spring", duration: 0.5 }}
             >
-              <Title>Natã Souza Santos | Tech Lead</Title>
+              <Title>Natã Souza Santos | {t("techlead")}</Title>
             </AnimationContent>
           </AnimatePresence>
         </PresentationSection>
