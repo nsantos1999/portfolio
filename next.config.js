@@ -1,13 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   i18n: {
-    locales: ["en-us", "pt-br"],
-    defaultLocale: "en-us",
-    pages: {
-      // "*": ["common"],
-      "/": ["home"], // app/page.tsx
-      // '/checkout': ['checkout'], // app/checkout/page.tsx
-    },
+    localeDetection: true,
+    locales: ["en", "pt-br"],
+    defaultLocale: "pt-br",
+    // pages: {
+    //   "/": ["home"], // app/page.tsx
+    // },
   },
 };
 

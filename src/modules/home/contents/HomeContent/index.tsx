@@ -8,10 +8,10 @@ import { PresentationSection } from "./sections/PresentationSection";
 import Lottie from "react-lottie";
 import animationData from "@/animations/developer.json";
 import { AnimatePresence } from "framer-motion";
-import useTranslation from "next-translate/useTranslation";
+import { useTranslation } from "@/i18n";
 
-export function HomeContent() {
-  const { t } = useTranslation("home");
+export async function HomeContent() {
+  const { t } = await useTranslation("home");
 
   return (
     <>
