@@ -9,6 +9,8 @@ import Lottie from "react-lottie";
 import animationData from "@/animations/developer.json";
 import { AnimatePresence } from "framer-motion";
 import { useTranslation } from "@/i18n";
+import Link from "next/link";
+import { PortfolioSection } from "./sections/PortfolioSection";
 
 export async function HomeContent() {
   const { t } = await useTranslation("home");
@@ -50,6 +52,8 @@ export async function HomeContent() {
         </PresentationSection>
         <Card>
           <Title>Portfolio</Title>
+          <PortfolioSection />
+          {/* <Link href={`/pt-br`}>Pt-br</Link> */}
         </Card>
       </Container>
     </>

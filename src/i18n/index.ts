@@ -6,12 +6,12 @@ import { TranslationOptions } from "./@types/translation.types";
 import { useLang } from "@/context/LangContext";
 
 const initI18next = async (lng: string, ns: string) => {
-  // console.log(lng);
   const i18nInstance = createInstance();
   await i18nInstance
     .use(initReactI18next)
     .use(
       resourcesToBackend((language: string, namespace: string) => {
+        console.log(language, namespace);
         return import(`./locales/${language}/${namespace}.json`);
       })
     )

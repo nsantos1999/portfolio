@@ -4,10 +4,6 @@ import { motion } from "framer-motion";
 
 import { styled } from "styled-components";
 
-// export const Title = styled.h1`
-//   color: ${(props) => props.theme.palette.primary.contrast};
-//   text-align: center;
-// `;
 export const Title = styled.h1`
   color: ${(props) => props.theme.palette.primary.contrast};
   text-align: center;

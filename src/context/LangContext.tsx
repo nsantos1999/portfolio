@@ -31,5 +31,11 @@ export async function LangProvider({ children }: LangProviderInterface) {
 }
 
 export function useLang() {
-  return useContext(LangContext);
+  const params = useParams();
+
+  return {
+    currentLang: params.lng,
+  };
+
+  // return useContext(LangContext);
 }

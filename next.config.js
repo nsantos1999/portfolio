@@ -4,9 +4,6 @@ const nextConfig = {
     localeDetection: true,
     locales: ["en", "pt-br"],
     defaultLocale: "pt-br",
-    // pages: {
-    //   "/": ["home"], // app/page.tsx
-    // },
   },
 };
 

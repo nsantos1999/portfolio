@@ -9,4 +9,7 @@ export const Container = styled.div`
     ${({ theme }) => theme.palette.primary.light},
     ${({ theme }) => theme.palette.primary.main}
   );
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 `;
