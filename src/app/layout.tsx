@@ -1,13 +1,16 @@
 import { StyledComponentsRegistry } from "@/registries/StyledComponentsRegistry";
 import "./globals.css";
-import { Quicksand } from "next/font/google";
+import { Quicksand, Kanit } from "next/font/google";
 import { CustomThemeProvider } from "@/providers/CustomThemeProvider";
 import GlobalStyle from "@/styles/global-styles";
 import { LangProvider } from "@/context/LangContext";
 import { languages } from "@/i18n/settings";
 import { dir } from "i18next";
 
-const quicksand = Quicksand({ subsets: ["latin"] });
+const quicksand = Kanit({
+  subsets: ["latin"],
+  weight: "200",
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -31,12 +34,10 @@ export default function RootLayout({
     <html lang={lng} dir={dir(lng)}>
       <body className={quicksand.className}>
         <StyledComponentsRegistry>
-          {/* <LangProvider> */}
           <CustomThemeProvider>
             <GlobalStyle />
             {children}
           </CustomThemeProvider>
-          {/* </LangProvider> */}
         </StyledComponentsRegistry>
       </body>
     </html>
